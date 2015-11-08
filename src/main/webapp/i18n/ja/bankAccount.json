@@ -1,0 +1,21 @@
+{
+    "helloJhipsterApp": {
+        "bankAccount" : {
+            "home": {
+                "title": "BankAccounts",
+                "createLabel": "BankAccount を追加",
+                "createOrEditLabel": "BankAccountを追加または編集"
+            },
+            "delete": {
+                "question": "BankAccount {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "BankAccount"
+            },
+            "name": "Name",
+            "balance": "Balance",
+            "user": "User",
+            "operation": "Operation"
+        }
+    }
+}

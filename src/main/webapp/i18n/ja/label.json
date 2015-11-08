@@ -1,0 +1,19 @@
+{
+    "helloJhipsterApp": {
+        "label" : {
+            "home": {
+                "title": "Labels",
+                "createLabel": "Label を追加",
+                "createOrEditLabel": "Labelを追加または編集"
+            },
+            "delete": {
+                "question": "Label {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Label"
+            },
+            "label": "Label",
+            "operation": "Operation"
+        }
+    }
+}

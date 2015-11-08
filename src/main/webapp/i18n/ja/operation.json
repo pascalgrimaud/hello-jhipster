@@ -1,0 +1,22 @@
+{
+    "helloJhipsterApp": {
+        "operation" : {
+            "home": {
+                "title": "Operations",
+                "createLabel": "Operation を追加",
+                "createOrEditLabel": "Operationを追加または編集"
+            },
+            "delete": {
+                "question": "Operation {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Operation"
+            },
+            "date": "Date",
+            "description": "Description",
+            "amount": "Amount",
+            "bankAccount": "BankAccount",
+            "label": "Label"
+        }
+    }
+}

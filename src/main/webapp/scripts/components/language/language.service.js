@@ -28,6 +28,11 @@ angular.module('helloJhipsterApp')
  */
     .constant('LANGUAGES', [
         'en', 'fr'
+        ,'de'
+        ,'it'
+        ,'ja'
+        ,'ru'
+        ,'es'
         //JHipster will add new languages here
     ]
 );
