@@ -3,11 +3,14 @@
         "label" : {
             "home": {
                 "title": "Labels",
-                "createLabel": "Create a new Label",
-                "createOrEditLabel": "Create or edit a Label"
+                "createLabel": "Crear nuevo Label",
+                "createOrEditLabel": "Crear o editar Label"
             },
+            "created": "Un nuevo Label ha sido creado con el identificador {{ param }}",
+            "updated": "Un Label ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Label ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Label {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Label {{ id }}?"
             },
             "detail": {
                 "title": "Label"

@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('helloJhipsterApp')
-    .controller('LabelController', function ($scope, Label, LabelSearch) {
+    .controller('LabelController', function ($scope, $state, $modal, Label, LabelSearch) {
+      
         $scope.labels = [];
         $scope.loadAll = function() {
             Label.query(function(result) {
@@ -10,21 +11,6 @@ angular.module('helloJhipsterApp')
         };
         $scope.loadAll();
 
-        $scope.delete = function (id) {
-            Label.get({id: id}, function(result) {
-                $scope.label = result;
-                $('#deleteLabelConfirmation').modal('show');
-            });
-        };
-
-        $scope.confirmDelete = function (id) {
-            Label.delete({id: id},
-                function () {
-                    $scope.loadAll();
-                    $('#deleteLabelConfirmation').modal('hide');
-                    $scope.clear();
-                });
-        };
 
         $scope.search = function () {
             LabelSearch.query({query: $scope.searchQuery}, function(result) {

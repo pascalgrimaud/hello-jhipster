@@ -1,10 +1,11 @@
 {
     "health": {
-        "title": "Heath checks",
-        "refresh.button": "Refresh",
+        "title": "Control de salud",
+        "refresh.button": "Refrescar",
+        "health.details.details": "Detalles",
         "stacktrace": "Stacktrace",
         "indicator": {
-            "diskSpace": "Disk space",
+            "diskSpace": "Espacio en disco",
             "mail": "Email",
             "elasticsearch": "Elasticsearch",
             "db": "Database"
@@ -14,8 +15,8 @@
             "status": "Estado"
         },
         "status": {
-            "UP": "HASTA",
-            "DOWN": "ABAJO"
+            "UP": "LEVANTADO",
+            "DOWN": "CAÍDO"
         }
     }
 }

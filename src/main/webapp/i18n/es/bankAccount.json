@@ -3,11 +3,14 @@
         "bankAccount" : {
             "home": {
                 "title": "BankAccounts",
-                "createLabel": "Create a new BankAccount",
-                "createOrEditLabel": "Create or edit a BankAccount"
+                "createLabel": "Crear nuevo BankAccount",
+                "createOrEditLabel": "Crear o editar BankAccount"
             },
+            "created": "Un nuevo BankAccount ha sido creado con el identificador {{ param }}",
+            "updated": "Un BankAccount ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un BankAccount ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete BankAccount {{ id }}?"
+                "question": "¿Seguro que quiere eliminar BankAccount {{ id }}?"
             },
             "detail": {
                 "title": "BankAccount"

@@ -3,11 +3,14 @@
         "operation" : {
             "home": {
                 "title": "Operations",
-                "createLabel": "Create a new Operation",
-                "createOrEditLabel": "Create or edit a Operation"
+                "createLabel": "Crear nuevo Operation",
+                "createOrEditLabel": "Crear o editar Operation"
             },
+            "created": "Un nuevo Operation ha sido creado con el identificador {{ param }}",
+            "updated": "Un Operation ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Operation ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Operation {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Operation {{ id }}?"
             },
             "detail": {
                 "title": "Operation"
