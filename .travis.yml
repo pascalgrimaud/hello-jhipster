@@ -6,8 +6,7 @@ language: java
 jdk:
   - oraclejdk8
 install:
-  - mvn package -DskipTests=true
+  - docker build -t hello-jhipster .
 script:
-  - docker build -t pascalgrimaud/hello-jhipster:2.23.0 .
   - docker images
   - echo $DOCKER_LOGIN -> $DOCKER_PASSWORD
