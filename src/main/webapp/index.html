@@ -17,6 +17,8 @@
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <!-- endbuild -->
+        <!-- placeholder link to load bootswatch themes, title holds the current applied theme name-->
+        <link rel="stylesheet" href="" id="bootswatch-css" title="Default">
     </head>
     <body ng-app="helloJhipsterApp">
         <!--[if lt IE 9]>
@@ -28,7 +30,7 @@
             <div class="well" ui-view="content"></div>
 
             <div class="footer">
-                <p translate="footer">This is your footer</p>
+                <p translate="footer" class="pull-left">This is your footer</p>
             </div>
         </div>
 
@@ -103,6 +105,9 @@
     <script src="scripts/components/util/date-util.service.js"></script>
     <script src="scripts/components/util/data-util.service.js"></script>
     <script src="scripts/components/util/sort.directive.js"></script>
+    <script src="scripts/components/util/bootswatch.controller.js"></script>
+    <script src="scripts/components/util/bootswatch.directive.js"></script>
+    <script src="scripts/components/util/bootswatch.service.js"></script>
     <script src="scripts/app/account/account.js"></script>
     <script src="scripts/app/account/activate/activate.js"></script>
     <script src="scripts/app/account/activate/activate.controller.js"></script>
