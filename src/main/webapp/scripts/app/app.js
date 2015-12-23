@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('helloJhipsterApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate', 
-               'ui.bootstrap', // for modal dialogs
-    'ngResource', 'ui.router', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll', 'angular-loading-bar'])
+    'ngResource', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload',
+    // jhipster-needle-angularjs-add-module JHipster will add new module
+    'ui.bootstrap', 'ui.router',  'infinite-scroll', 'angular-loading-bar'])
 
     .run(function ($rootScope, $location, $window, $http, $state, $translate, Language, Auth, Principal, ENV, VERSION) {
         // update the window title using params in the following
@@ -119,6 +120,7 @@ angular.module('helloJhipsterApp', ['LocalStorageModule', 'tmh.dynamicLocale', '
         tmhDynamicLocaleProvider.storageKey('NG_TRANSLATE_LANG_KEY');
         
     })
+    // jhipster-needle-angularjs-add-config JHipster will add new application configuration
     .config(['$urlMatcherFactoryProvider', function($urlMatcherFactory) {
         $urlMatcherFactory.type('boolean', {
             name : 'boolean',
@@ -128,4 +130,4 @@ angular.module('helloJhipsterApp', ['LocalStorageModule', 'tmh.dynamicLocale', '
             is: function(val) { return [true,false,0,1].indexOf(val) >= 0 },
             pattern: /bool|true|0|1/
         });
-    }]);;
+    }]);

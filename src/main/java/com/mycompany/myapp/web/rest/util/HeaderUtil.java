@@ -26,4 +26,11 @@ public class HeaderUtil {
     public static HttpHeaders createEntityDeletionAlert(String entityName, String param) {
         return createAlert("helloJhipsterApp." + entityName + ".deleted", param);
     }
+
+    public static HttpHeaders createFailureAlert(String entityName, String errorKey, String defaultMessage) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("X-helloJhipsterApp-error", "error." + errorKey);
+        headers.add("X-helloJhipsterApp-params", entityName);
+        return headers;
+    }
 }
