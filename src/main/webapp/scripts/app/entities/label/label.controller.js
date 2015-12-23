@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('helloJhipsterApp')
-    .controller('LabelController', function ($scope, $state, $modal, Label, LabelSearch) {
-      
+    .controller('LabelController', function ($scope, $state, Label, LabelSearch) {
+
         $scope.labels = [];
         $scope.loadAll = function() {
             Label.query(function(result) {

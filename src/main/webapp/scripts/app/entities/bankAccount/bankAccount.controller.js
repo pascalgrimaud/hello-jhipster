@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('helloJhipsterApp')
-    .controller('BankAccountController', function ($scope, $state, $modal, BankAccount, BankAccountSearch) {
-      
+    .controller('BankAccountController', function ($scope, $state, BankAccount, BankAccountSearch) {
+
         $scope.bankAccounts = [];
         $scope.loadAll = function() {
             BankAccount.query(function(result) {

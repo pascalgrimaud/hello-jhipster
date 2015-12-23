@@ -4,12 +4,13 @@
         "browsehappy": "Stai utilizzando un browser <strong> non aggiornato </ strong> <a href=\"http://browsehappy.com/?locale=en\"> Aggiorna il tuo browser per </a> migliorare la loro esperienza.",
         "menu": {
             "home": "Home",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entità",
-                "operation": "Operation",
-                "label": "Label",
                 "bankAccount": "BankAccount",
-                "additionalEntity": "JHipster con entita' aggiunte qui senza traduzione"
+                "label": "Label",
+                "operation": "Operation",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
                 "main": "Principale",
@@ -106,6 +107,14 @@
             "number": "Questo campo deve essere un numero.",
             "datetimelocal": "Questo campo dovrebbe essere una data e l'ora."
         }
+    },
+    "error": {
+        "server.not.reachable": "Server not reachable",
+        "NotNull": "Field {{fieldName}} cannot be empty!",
+        "Size": "Field {{fieldName}} does not meet min/max size requirements!",
+        "userexists": "Login name already used!",
+        "emailexists": "E-mail is already in use!",
+        "idexists": "A new {{entityName}} cannot already have an ID"
     },
     "footer": "pie di pagina"
 }

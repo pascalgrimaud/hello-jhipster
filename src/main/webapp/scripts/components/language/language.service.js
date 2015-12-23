@@ -33,10 +33,6 @@ angular.module('helloJhipsterApp')
         ,'ja'
         ,'ru'
         ,'es'
-        //JHipster will add new languages here
+        // jhipster-needle-006 - JHipster will add new languages here
     ]
 );
-
-
-
-
