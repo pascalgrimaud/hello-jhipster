@@ -1,0 +1,18 @@
+image: moifort/jhipster-gitlab-ci-image:2.26.1-cache
+
+before_script:
+  - cp -r /root/node_modules .
+  - npm install
+
+stages:
+  - build
+  - test
+  - deploy
+
+maven-test:
+  stage: test
+  script: "mvn test"
+
+grunt-test:
+  stage: test
+  script: "grunt test"
