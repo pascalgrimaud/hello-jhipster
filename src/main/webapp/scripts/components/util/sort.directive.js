@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .directive('jhSort', function () {
         return {
             restrict: 'A',

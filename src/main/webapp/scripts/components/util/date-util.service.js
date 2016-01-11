@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .service('DateUtils', function ($filter) {
 
     this.convertLocaleDateToServer = function(date) {

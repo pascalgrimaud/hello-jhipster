@@ -1,8 +1,8 @@
 'use strict';
 
-describe('Controllers Tests ', function () {
+describe('Controller Tests', function () {
 
-    beforeEach(module('helloJhipsterApp'));
+    beforeEach(module('hellojhipsterApp'));
 
     describe('LoginController', function () {
         var $scope;

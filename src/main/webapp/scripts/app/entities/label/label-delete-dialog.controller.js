@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
 	.controller('LabelDeleteController', function($scope, $uibModalInstance, entity, Label) {
 
         $scope.label = entity;

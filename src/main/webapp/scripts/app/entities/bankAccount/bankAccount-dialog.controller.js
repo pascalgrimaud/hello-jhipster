@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp').controller('BankAccountDialogController',
+angular.module('hellojhipsterApp').controller('BankAccountDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'BankAccount', 'User', 'Operation',
         function($scope, $stateParams, $uibModalInstance, entity, BankAccount, User, Operation) {
 
@@ -14,7 +14,7 @@ angular.module('helloJhipsterApp').controller('BankAccountDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('helloJhipsterApp:bankAccountUpdate', result);
+            $scope.$emit('hellojhipsterApp:bankAccountUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

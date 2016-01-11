@@ -52,7 +52,7 @@
                 "register": "アカウントをまだお持ちでないですか? <a class=\"alert-link\" href=\"#/register\">アカウントを登録する</a>"
             },
             "error": {
-                "dontmatch" : "パスワードが一致しません!"
+                "dontmatch": "パスワードが一致しません!"
             },
             "validate": {
                 "newpassword": {
@@ -75,7 +75,7 @@
             }
         },
         "field": {
-            "id" : "ID"
+            "id": "ID"
         }
     },
     "entity": {
@@ -117,5 +117,8 @@
         "emailexists": "E-mail is already in use!",
         "idexists": "A new {{entityName}} cannot already have an ID"
     },
-    "footer": "フッターです"
+    "footer": "フッターです",
+    "bootswatch": {
+        "themeSelector": "Theme"
+    }
 }

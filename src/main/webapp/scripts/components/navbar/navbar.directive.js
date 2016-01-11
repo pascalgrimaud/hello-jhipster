@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .directive('activeMenu', function($translate, $locale, tmhDynamicLocale) {
         return {
             restrict: 'A',

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .controller('LabelDetailController', function ($scope, $rootScope, $stateParams, entity, Label, Operation) {
         $scope.label = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('helloJhipsterApp')
                 $scope.label = result;
             });
         };
-        var unsubscribe = $rootScope.$on('helloJhipsterApp:labelUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('hellojhipsterApp:labelUpdate', function(event, result) {
             $scope.label = result;
         });
         $scope.$on('$destroy', unsubscribe);

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
 	.controller('user-managementDeleteController', function($scope, $uibModalInstance, entity, User) {
 
         $scope.user = entity;

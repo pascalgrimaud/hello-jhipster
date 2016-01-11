@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
 	.controller('BankAccountDeleteController', function($scope, $uibModalInstance, entity, BankAccount) {
 
         $scope.bankAccount = entity;

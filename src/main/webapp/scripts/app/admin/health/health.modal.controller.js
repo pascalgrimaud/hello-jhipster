@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .controller('HealthModalController', function($scope, $uibModalInstance, currentHealth, baseName, subSystemName) {
 
         $scope.currentHealth = currentHealth;

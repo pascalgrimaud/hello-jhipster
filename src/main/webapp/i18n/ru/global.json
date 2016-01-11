@@ -75,7 +75,7 @@
             }
         },
         "field": {
-            "id" : "ID"
+            "id": "ID"
         }
     },
     "entity": {
@@ -117,5 +117,8 @@
         "emailexists": "E-mail is already in use!",
         "idexists": "A new {{entityName}} cannot already have an ID"
     },
-    "footer": "Это ваш футтер"
+    "footer": "Это ваш футтер",
+    "bootswatch": {
+        "themeSelector": "Theme"
+    }
 }

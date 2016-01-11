@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('operation', {
@@ -8,7 +8,7 @@ angular.module('helloJhipsterApp')
                 url: '/operations',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'helloJhipsterApp.operation.home.title'
+                    pageTitle: 'hellojhipsterApp.operation.home.title'
                 },
                 views: {
                     'content@': {
@@ -29,7 +29,7 @@ angular.module('helloJhipsterApp')
                 url: '/operation/{id}',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'helloJhipsterApp.operation.detail.title'
+                    pageTitle: 'hellojhipsterApp.operation.detail.title'
                 },
                 views: {
                     'content@': {

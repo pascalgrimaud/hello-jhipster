@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .factory('Principal', function Principal($q, Account) {
         var _identity,
             _authenticated = false;

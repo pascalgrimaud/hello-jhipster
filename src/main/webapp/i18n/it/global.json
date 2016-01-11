@@ -52,7 +52,7 @@
                 "register": "Non hai ancora un account <a class=\"alert-link\" href=\"#/register\">Crea un account?</a>"
             },
             "error": {
-                "dontmatch" : "La password e la conferma non corrispondono!"
+                "dontmatch": "La password e la conferma non corrispondono!"
             },
             "validate": {
                 "newpassword": {
@@ -75,7 +75,7 @@
             }
         },
         "field": {
-            "id" : "ID"
+            "id": "ID"
         }
     },
     "entity": {
@@ -117,5 +117,8 @@
         "emailexists": "E-mail is already in use!",
         "idexists": "A new {{entityName}} cannot already have an ID"
     },
-    "footer": "pie di pagina"
+    "footer": "pie di pagina",
+    "bootswatch": {
+        "themeSelector": "Theme"
+    }
 }

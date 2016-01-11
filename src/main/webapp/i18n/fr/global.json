@@ -3,14 +3,13 @@
         "title": "HelloJhipster",
         "browsehappy": "Vous utilisez un <strong>ancien</strong> navigateur. Veuillez <a href=\"http://browsehappy.com/?locale=fr\">mettre à jour votre navigateur</a> pour une meilleure expérience.",
         "menu": {
-            "theme": "Theme",
             "home": "Accueil",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entités",
                 "bankAccount": "BankAccount",
-                "label": "Label",
                 "operation": "Operation",
+                "label": "Label",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -32,7 +31,8 @@
                 "logs": "Logs",
                 "audits": "Audits",
                 "apidocs": "API",
-                "database": "Base de données"
+                "database": "Base de données",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
             },
             "language": "Langue"
         },
@@ -117,5 +117,8 @@
         "emailexists": "E-mail is already in use!",
         "idexists": "A new {{entityName}} cannot already have an ID"
     },
-    "footer": "Ceci est votre pied de page"
+    "footer": "Ceci est votre pied de page",
+    "bootswatch": {
+        "themeSelector": "Theme"
+    }
 }

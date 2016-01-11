@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .controller('BankAccountDetailController', function ($scope, $rootScope, $stateParams, entity, BankAccount, User, Operation) {
         $scope.bankAccount = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('helloJhipsterApp')
                 $scope.bankAccount = result;
             });
         };
-        var unsubscribe = $rootScope.$on('helloJhipsterApp:bankAccountUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('hellojhipsterApp:bankAccountUpdate', function(event, result) {
             $scope.bankAccount = result;
         });
         $scope.$on('$destroy', unsubscribe);

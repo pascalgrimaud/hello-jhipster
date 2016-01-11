@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .factory('Language', function ($q, $http, $translate, LANGUAGES) {
         return {
             getCurrent: function () {
@@ -28,11 +28,6 @@ angular.module('helloJhipsterApp')
  */
     .constant('LANGUAGES', [
         'en', 'fr'
-        ,'de'
-        ,'it'
-        ,'ja'
-        ,'ru'
-        ,'es'
         // jhipster-needle-006 - JHipster will add new languages here
     ]
 );

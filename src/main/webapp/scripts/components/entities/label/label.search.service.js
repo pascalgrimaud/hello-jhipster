@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .factory('LabelSearch', function ($resource) {
         return $resource('api/_search/labels/:query', {}, {
             'query': { method: 'GET', isArray: true}

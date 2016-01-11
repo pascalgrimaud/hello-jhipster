@@ -10,8 +10,8 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
@@ -20,17 +20,29 @@
         <!-- placeholder link to load bootswatch themes, title holds the current applied theme name-->
         <link rel="stylesheet" href="" id="bootswatch-css" title="Default">
     </head>
-    <body ng-app="helloJhipsterApp">
+    <body ng-app="hellojhipsterApp">
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
+        <div ng-show="{{ENV === &apos;dev&apos;}}" class="development" ng-cloak=""></div>
         <div ui-view="navbar" ng-cloak=""></div>
         <div class="container">
             <div class="well" ui-view="content"></div>
 
             <div class="footer">
-                <p translate="footer" class="pull-left">This is your footer</p>
+                <p translate="footer">This is your footer</p>
+                <div ng-controller="BootswatchController" id="bootswatch-theme-switcher" class="dropup pull-right">
+                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-adjust"></span>
+                        <span class="hidden-tablet" translate="bootswatch.themeSelector">Theme</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="theme-link" ng-repeat="theme in themes">
+                            <a href="" jh-switch-theme="theme">{{theme.name}}</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -105,9 +117,6 @@
     <script src="scripts/components/util/date-util.service.js"></script>
     <script src="scripts/components/util/data-util.service.js"></script>
     <script src="scripts/components/util/sort.directive.js"></script>
-    <script src="scripts/components/util/bootswatch.controller.js"></script>
-    <script src="scripts/components/util/bootswatch.directive.js"></script>
-    <script src="scripts/components/util/bootswatch.service.js"></script>
     <script src="scripts/app/account/account.js"></script>
     <script src="scripts/app/account/activate/activate.js"></script>
     <script src="scripts/app/account/activate/activate.controller.js"></script>
@@ -162,13 +171,6 @@
     <script src="scripts/app/entities/bankAccount/bankAccount-detail.controller.js"></script>
     <script src="scripts/components/entities/bankAccount/bankAccount.service.js"></script>
     <script src="scripts/components/entities/bankAccount/bankAccount.search.service.js"></script>
-    <script src="scripts/app/entities/label/label.js"></script>
-    <script src="scripts/app/entities/label/label.controller.js"></script>
-    <script src="scripts/app/entities/label/label-dialog.controller.js"></script>
-    <script src="scripts/app/entities/label/label-delete-dialog.controller.js"></script>
-    <script src="scripts/app/entities/label/label-detail.controller.js"></script>
-    <script src="scripts/components/entities/label/label.service.js"></script>
-    <script src="scripts/components/entities/label/label.search.service.js"></script>
     <script src="scripts/app/entities/operation/operation.js"></script>
     <script src="scripts/app/entities/operation/operation.controller.js"></script>
     <script src="scripts/app/entities/operation/operation-dialog.controller.js"></script>
@@ -176,11 +178,16 @@
     <script src="scripts/app/entities/operation/operation-detail.controller.js"></script>
     <script src="scripts/components/entities/operation/operation.service.js"></script>
     <script src="scripts/components/entities/operation/operation.search.service.js"></script>
-    <script src="bower_components/messageformat/locale/de.js"></script>
-    <script src="bower_components/messageformat/locale/it.js"></script>
-    <script src="bower_components/messageformat/locale/ja.js"></script>
-    <script src="bower_components/messageformat/locale/ru.js"></script>
-    <script src="bower_components/messageformat/locale/es.js"></script>
+    <script src="scripts/app/entities/label/label.js"></script>
+    <script src="scripts/app/entities/label/label.controller.js"></script>
+    <script src="scripts/app/entities/label/label-dialog.controller.js"></script>
+    <script src="scripts/app/entities/label/label-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/label/label-detail.controller.js"></script>
+    <script src="scripts/components/entities/label/label.service.js"></script>
+    <script src="scripts/components/entities/label/label.search.service.js"></script>
+    <script src="scripts/components/util/bootswatch/bootswatch.service.js"></script>
+    <script src="scripts/components/util/bootswatch/bootswatch.directive.js"></script>
+    <script src="scripts/components/util/bootswatch/bootswatch.controller.js"></script>
     <!-- endbuild -->
 </body>
 </html>

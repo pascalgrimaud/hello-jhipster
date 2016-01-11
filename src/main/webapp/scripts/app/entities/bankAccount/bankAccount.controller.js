@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .controller('BankAccountController', function ($scope, $state, BankAccount, BankAccountSearch) {
 
         $scope.bankAccounts = [];

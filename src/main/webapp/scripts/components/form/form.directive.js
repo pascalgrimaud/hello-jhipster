@@ -1,7 +1,7 @@
 /* globals $ */
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .directive('showValidation', function() {
         return {
             restrict: 'A',

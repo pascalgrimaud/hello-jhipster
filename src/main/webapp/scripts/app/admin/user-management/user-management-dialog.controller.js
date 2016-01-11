@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp').controller('UserManagementDialogController',
+angular.module('hellojhipsterApp').controller('UserManagementDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'User', 'Language',
         function($scope, $stateParams, $uibModalInstance, entity, User, Language) {
 

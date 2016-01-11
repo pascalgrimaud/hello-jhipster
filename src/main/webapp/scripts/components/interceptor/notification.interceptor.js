@@ -1,12 +1,12 @@
  'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .factory('notificationInterceptor', function ($q, AlertService) {
         return {
             response: function(response) {
-                var alertKey = response.headers('X-helloJhipsterApp-alert');
+                var alertKey = response.headers('X-hellojhipsterApp-alert');
                 if (angular.isString(alertKey)) {
-                    AlertService.success(alertKey, { param : response.headers('X-helloJhipsterApp-params')});
+                    AlertService.success(alertKey, { param : response.headers('X-hellojhipsterApp-params')});
                 }
                 return response;
             }

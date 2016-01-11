@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .filter('capitalize', function () {
         return function (input, scope) {
             if (input != null)

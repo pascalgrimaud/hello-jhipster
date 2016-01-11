@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .config(function (uibPagerConfig) {
         uibPagerConfig.itemsPerPage = 20;
         uibPagerConfig.previousText = '«';

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .controller('UserManagementDetailController', function ($scope, $stateParams, User) {
         $scope.user = {};
         $scope.load = function (login) {

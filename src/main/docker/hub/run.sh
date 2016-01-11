@@ -17,12 +17,12 @@ if [ -d ${SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES} ]; then
 else
   echo "SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES init by configuration: ${SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES}"
 fi
+if [ -d ${JHIPSTER_SLEEP} ]; then
+  JHIPSTER_SLEEP=20
+fi
 ################################################################################
 # Start application
 ################################################################################
-if [ -d ${JHIPSTER_SLEEP} ]; then
-    JHIPSTER_SLEEP=20
-fi
 echo "The application will start in ${JHIPSTER_SLEEP}sec..." && sleep ${JHIPSTER_SLEEP}
 if [ -d ${JHIPSTER_SPRING} ]; then
   java -jar /app.war \

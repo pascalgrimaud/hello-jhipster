@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .controller('OperationController', function ($scope, $state, Operation, OperationSearch, ParseLinks) {
 
         $scope.operations = [];

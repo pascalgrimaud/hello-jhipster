@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .controller('SessionsController', function ($scope, Sessions, Principal) {
         Principal.identity().then(function(account) {
             $scope.account = account;

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('password', {

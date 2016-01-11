@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helloJhipsterApp')
+angular.module('hellojhipsterApp')
     .controller('LabelController', function ($scope, $state, Label, LabelSearch) {
 
         $scope.labels = [];
