@@ -2,6 +2,8 @@
 
 angular.module('hellojhipsterApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate', 
     'ngResource', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload',
+    'NgSwitchery',
+    'ui.bootstrap-slider',
     // jhipster-needle-angularjs-add-module JHipster will add new module here
     'ui.bootstrap', 'ui.router',  'infinite-scroll', 'angular-loading-bar'])
 

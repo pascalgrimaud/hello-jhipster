@@ -33,6 +33,12 @@ module.exports = function (config) {
             'main/webapp/bower_components/json3/lib/json3.js',
             'main/webapp/bower_components/ng-file-upload/ng-file-upload.js',
             'main/webapp/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
+            'main/webapp/bower_components/transitionize/dist/transitionize.js',
+            'main/webapp/bower_components/fastclick/lib/fastclick.js',
+            'main/webapp/bower_components/switchery/dist/switchery.js',
+            'main/webapp/bower_components/ng-switchery/src/ng-switchery.js',
+            'main/webapp/bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
+            'main/webapp/bower_components/angular-bootstrap-slider/slider.js',
             'main/webapp/bower_components/angular-mocks/angular-mocks.js',
             // endbower
             'main/webapp/scripts/app/app.js',
