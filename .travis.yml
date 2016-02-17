@@ -1,10 +1,8 @@
 os:
   - linux
-services:
-  - docker
 language: node_js
 node_js:
-  - "4.2.1"
+  - "4.2.4"
 jdk:
   - oraclejdk8
 before_install:
