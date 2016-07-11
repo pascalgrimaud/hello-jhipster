@@ -1,11 +1,15 @@
 {
-    "hellojhipsterApp": {
+    "helloJhipsterApp": {
         "operation" : {
             "home": {
                 "title": "Operations",
                 "createLabel": "Operation を追加",
-                "createOrEditLabel": "Operationを追加または編集"
+                "createOrEditLabel": "Operationを追加または編集",
+                "search": "Search for Operation"
             },
+            "created": "A new Operation is created with identifier {{ param }}",
+            "updated": "A Operation is updated with identifier {{ param }}",
+            "deleted": "A Operation is deleted with identifier {{ param }}",
             "delete": {
                 "question": "Operation {{ id }}を削除してもよろしいですか？"
             },
@@ -15,7 +19,7 @@
             "date": "Date",
             "description": "Description",
             "amount": "Amount",
-            "bankAccount": "BankAccount",
+            "bankAccount": "Bank Account",
             "label": "Label"
         }
     }

@@ -1,16 +1,20 @@
 {
-    "hellojhipsterApp": {
+    "helloJhipsterApp": {
         "bankAccount" : {
             "home": {
-                "title": "BankAccounts",
-                "createLabel": "Create a new BankAccount",
-                "createOrEditLabel": "Create or edit a BankAccount"
+                "title": "Bank Accounts",
+                "createLabel": "Bank Account erstellen",
+                "createOrEditLabel": "Bank Account erstellen oder bearbeiten",
+                "search": "Suche nach Bank Account"
             },
+            "created": "Bank Account erstellt mit ID {{ param }}",
+            "updated": "Bank Account aktualisiert mit ID {{ param }}",
+            "deleted": "Bank Account gelöscht mit ID {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete BankAccount {{ id }}?"
+                "question": "Soll Bank Account {{ id }} wirklich dauerhaft gelöscht werden?"
             },
             "detail": {
-                "title": "BankAccount"
+                "title": "Bank Account"
             },
             "name": "Name",
             "balance": "Balance",

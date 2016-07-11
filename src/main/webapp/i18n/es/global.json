@@ -3,12 +3,11 @@
         "title": "HelloJhipster",
         "browsehappy": "Está usando un navegador <strong>no actualizado</strong>. Por favor, <a href=\"http://browsehappy.com/?locale=en\">actualice su navegador</a> para mejorar su experiencia.",
         "menu": {
-            "theme": "Theme",
             "home": "Inicio",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entidades",
-                "bankAccount": "BankAccount",
+                "bankAccount": "Bank Account",
                 "label": "Label",
                 "operation": "Operation",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
@@ -24,7 +23,7 @@
             },
             "admin": {
                 "main": "Administración",
-                "user-management": "Gestión de usuarios",
+                "userManagement": "Gestión de usuarios",
                 "tracker": "Registro de los usuarios",
                 "metrics": "Métricas",
                 "health": "Salud",
@@ -32,7 +31,8 @@
                 "logs": "Logs",
                 "audits": "Auditorías",
                 "apidocs": "API",
-                "database": "Base de datos"
+                "database": "Base de datos",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
             },
             "language": "Idioma"
         },
@@ -48,11 +48,11 @@
         },
         "messages": {
             "info": {
-                "authenticated": "Si desea <a class=\"alert-link\" href=\"#/login\">iniciar una sesión</a>, puede intentar con las cuentas predeterminadas:<br/>- Administrator (usuario=\"admin\" y contraseña=\"admin\") <br/>- Usuario (usuario=\"user\" y contraseña=\"user\").",
-                "register": "¿No tienes una cuenta todavía? <a class=\"alert-link\" href=\"#/register\">Crea una cuenta</a>"
+                "authenticated": "Si desea <a class=\"alert-link\" href=\"\" ng-click=\"vm.login()\">iniciar una sesión</a>, puede intentar con las cuentas predeterminadas:<br/>- Administrator (usuario=\"admin\" y contraseña=\"admin\") <br/>- Usuario (usuario=\"user\" y contraseña=\"user\").",
+                "register": "¿No tienes una cuenta todavía? <a class=\"alert-link\" href=\"\" ng-click=\"vm.register()\">Crea una cuenta</a>"
             },
             "error": {
-                "dontmatch": "¡La contraseña y la confirmación de contraseña no coinciden!"
+                "dontmatch" : "¡La contraseña y la confirmación de contraseña no coinciden!"
             },
             "validate": {
                 "newpassword": {
@@ -75,7 +75,10 @@
             }
         },
         "field": {
-            "id": "ID"
+            "id" : "ID"
+        },
+        "ribbon": {
+            "dev":"Development"
         }
     },
     "entity": {
@@ -86,6 +89,7 @@
             "cancel": "Cancelar",
             "delete": "Eliminar",
             "edit": "Editar",
+            "open": "Open",
             "save": "Guardar",
             "view": "Vista"
         },
@@ -111,14 +115,12 @@
     },
     "error": {
         "server.not.reachable": "Servidor no accesible",
+        "url.not.found": "Not found",
         "NotNull": "¡El campo {{fieldName}} no puede estar vacío!",
         "Size": "¡El campo {{fieldName}} no cumple con los requisitos de tamaño mínimo/máximo!",
         "userexists": "Login name already used!",
         "emailexists": "E-mail is already in use!",
         "idexists": "A new {{entityName}} cannot already have an ID"
     },
-    "footer": "pie de página",
-    "bootswatch": {
-        "themeSelector": "Theme"
-    }
+    "footer": "pie de página"
 }

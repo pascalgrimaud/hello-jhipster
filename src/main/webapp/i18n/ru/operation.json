@@ -1,13 +1,17 @@
 {
-    "hellojhipsterApp": {
+    "helloJhipsterApp": {
         "operation" : {
             "home": {
                 "title": "Operations",
-                "createLabel": "Create a new Operation",
-                "createOrEditLabel": "Create or edit a Operation"
+                "createLabel": "Создать новый Operation",
+                "createOrEditLabel": "Создать или отредактировать Operation",
+                "search": "Найти Operation"
             },
+            "created": "Новый Operation создан с идентификатором {{ param }}",
+            "updated": "Operation обновлен с идентификатором {{ param }}",
+            "deleted": "Operation удален с идентификатором {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Operation {{ id }}?"
+                "question": "Вы уверены что хотите удалить Operation {{ id }}?"
             },
             "detail": {
                 "title": "Operation"
@@ -15,7 +19,7 @@
             "date": "Date",
             "description": "Description",
             "amount": "Amount",
-            "bankAccount": "BankAccount",
+            "bankAccount": "Bank Account",
             "label": "Label"
         }
     }

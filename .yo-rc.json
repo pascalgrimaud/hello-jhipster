@@ -19,6 +19,19 @@
     "rememberMeKey": "dd3efeb4ac43ee3c8a80ace279d660b30de7c276",
     "testFrameworks": [
       "gatling"
+    ],
+    "jhipsterVersion": "3.4.2",
+    "serverPort": "8080",
+    "applicationType": "monolith",
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "fr",
+      "de",
+      "it",
+      "ja",
+      "ru",
+      "es"
     ]
   }
 }

@@ -1,10 +1,11 @@
 {
-    "hellojhipsterApp": {
+    "helloJhipsterApp": {
         "label" : {
             "home": {
                 "title": "Labels",
                 "createLabel": "Crear nuevo Label",
-                "createOrEditLabel": "Crear o editar Label"
+                "createOrEditLabel": "Crear o editar Label",
+                "search": "Search for Label"
             },
             "created": "Un nuevo Label ha sido creado con el identificador {{ param }}",
             "updated": "Un Label ha sido actualizado con el identificador {{ param }}",

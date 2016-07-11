@@ -3,12 +3,11 @@
         "title": "HelloJhipster",
         "browsehappy": "Sie benutzen einen <strong>veralteten</strong> Browser. Bitte <a href=\"http://browsehappy.com/?locale=de/\">aktualisieren Sie Ihren Browser</a>, um die Benutzerfreundlichkeit zu erhöhen.",
         "menu": {
-            "theme": "Theme",
             "home": "Startseite",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entitäten",
-                "bankAccount": "BankAccount",
+                "bankAccount": "Bank Account",
                 "label": "Label",
                 "operation": "Operation",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
@@ -24,7 +23,7 @@
             },
             "admin": {
                 "main": "Administration",
-                "user-management": "Benutzerverwaltung",
+                "userManagement": "Benutzerverwaltung",
                 "tracker": "Benutzer Aktivitäten",
                 "metrics": "Metriken",
                 "health": "Status",
@@ -32,7 +31,8 @@
                 "logs": "Protokoll",
                 "audits": "Audits",
                 "apidocs": "API",
-                "database": "Datenbank"
+                "database": "Datenbank",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
             },
             "language": "Sprache"
         },
@@ -42,14 +42,14 @@
             "newpassword": "Neues Passwort",
             "newpassword.placeholder": "Neues Passwort",
             "confirmpassword": "Neues Passwort bestätigen",
-            "confirmpassword.placeholder": "Bestätigen Sie ihr neues Passwort",
+            "confirmpassword.placeholder": "Bestätigen Sie Ihr neues Passwort",
             "email": "E-Mail Adresse",
             "email.placeholder": "Ihre E-Mail Adresse"
         },
         "messages": {
             "info": {
-                "authenticated": "Wenn Sie sich <a class=\"alert-link\" href=\"#/login\">anmelden</a> möchten, versuchen Sie es mit <br/>- Administrator (Name=\"admin\" und Passwort=\"admin\")<br/>- Benutzer (Name=\"user\" und Passwort=\"user\").",
-                "register": "Sie haben noch keinen Zugang? <a class=\"alert-link\" href=\"#/register\">Registrieren Sie sich</a>"
+                "authenticated": "Wenn Sie sich <a class=\"alert-link\" href=\"\" ng-click=\"vm.login()\">anmelden</a> möchten, versuchen Sie es mit <br/>- Administrator (Name=\"admin\" und Passwort=\"admin\")<br/>- Benutzer (Name=\"user\" und Passwort=\"user\").",
+                "register": "Sie haben noch keinen Zugang? <a class=\"alert-link\" href=\"\" ng-click=\"vm.register()\">Registrieren Sie sich</a>"
             },
             "error": {
                 "dontmatch": "Das bestätigte Passwort entspricht nicht dem neuen Passwort!"
@@ -75,7 +75,10 @@
             }
         },
         "field": {
-            "id": "ID"
+            "id" : "ID"
+        },
+        "ribbon": {
+            "dev":"Development"
         }
     },
     "entity": {
@@ -86,6 +89,7 @@
             "cancel": "Abbrechen",
             "delete": "Löschen",
             "edit": "Bearbeiten",
+            "open": "Open",
             "save": "Speichern",
             "view": "Details"
         },
@@ -111,14 +115,12 @@
     },
     "error": {
         "server.not.reachable": "Server ist nicht erreichbar",
+        "url.not.found": "Not found",
         "NotNull": "Feld {{fieldName}} kann nicht leer sein!",
         "Size": "Feld {{fieldName}} erfüllt nicht die minimalen/maximalen Voraussetzungen!",
-        "userexists": "Login name already used!",
-        "emailexists": "E-mail is already in use!",
-        "idexists": "A new {{entityName}} cannot already have an ID"
+        "userexists": "Benutzername bereits vergeben!",
+        "emailexists": "E-mail wird bereits verwendet!",
+        "idexists": "Ein neuer {{entityName}} kann noch keine ID haben"
     },
-    "footer": "Dies ist Ihre Fußzeile",
-    "bootswatch": {
-        "themeSelector": "Theme"
-    }
+    "footer": "Dies ist Ihre Fußzeile"
 }

@@ -11,8 +11,9 @@
 # ===================================================================
 
 spring:
+    application:
+        name: HelloJhipster
     datasource:
-        driver-class-name: org.h2.jdbcx.JdbcDataSource
         url: jdbc:h2:mem:HelloJhipster;DB_CLOSE_DELAY=-1
         name:
         username:
@@ -21,7 +22,7 @@ spring:
         database-platform: com.mycompany.myapp.domain.util.FixedH2Dialect
         database: H2
         open-in-view: false
-        show_sql: true
+        show-sql: true
         hibernate:
             ddl-auto: none
             naming-strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
@@ -67,7 +68,7 @@ jhipster:
         maxPoolSize: 50
         queueCapacity: 10000
     security:
-        rememberme:
+        rememberMe:
             # security key (this key should be unique for your application, and kept secret)
             key: dd3efeb4ac43ee3c8a80ace279d660b30de7c276
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
@@ -77,6 +78,8 @@ jhipster:
         description: HelloJhipster API documentation
         version: 0.0.1
         termsOfServiceUrl:
-        contact:
+        contactName:
+        contactUrl:
+        contactEmail:
         license:
         licenseUrl:

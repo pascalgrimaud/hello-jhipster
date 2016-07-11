@@ -1,13 +1,17 @@
 {
-    "hellojhipsterApp": {
+    "helloJhipsterApp": {
         "label" : {
             "home": {
                 "title": "Labels",
-                "createLabel": "Create a new Label",
-                "createOrEditLabel": "Create or edit a Label"
+                "createLabel": "Создать новый Label",
+                "createOrEditLabel": "Создать или отредактировать Label",
+                "search": "Найти Label"
             },
+            "created": "Новый Label создан с идентификатором {{ param }}",
+            "updated": "Label обновлен с идентификатором {{ param }}",
+            "deleted": "Label удален с идентификатором {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Label {{ id }}?"
+                "question": "Вы уверены что хотите удалить Label {{ id }}?"
             },
             "detail": {
                 "title": "Label"

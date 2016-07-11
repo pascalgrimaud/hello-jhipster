@@ -1,11 +1,15 @@
 {
-    "hellojhipsterApp": {
+    "helloJhipsterApp": {
         "label" : {
             "home": {
                 "title": "Labels",
                 "createLabel": "Label を追加",
-                "createOrEditLabel": "Labelを追加または編集"
+                "createOrEditLabel": "Labelを追加または編集",
+                "search": "Search for Label"
             },
+            "created": "A new Label is created with identifier {{ param }}",
+            "updated": "A Label is updated with identifier {{ param }}",
+            "deleted": "A Label is deleted with identifier {{ param }}",
             "delete": {
                 "question": "Label {{ id }}を削除してもよろしいですか？"
             },

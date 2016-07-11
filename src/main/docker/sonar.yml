@@ -1,6 +1,8 @@
-hellojhipster-sonar:
-  container_name: hellojhipster-sonar
-  image: sonarqube:4.5.6
-  ports:
-    - "9000:9000"
-    - "9092:9092"
+version: '2'
+services:
+    hellojhipster-sonar:
+        container_name: hellojhipster-sonar
+        image: sonarqube:5.5-alpine
+        ports:
+            - 9000:9000
+            - 9092:9092

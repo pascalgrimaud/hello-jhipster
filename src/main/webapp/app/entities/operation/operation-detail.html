@@ -1,0 +1,36 @@
+
+<div>
+    <h2><span translate="helloJhipsterApp.operation.detail.title">Operation</span> {{vm.operation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="helloJhipsterApp.operation.date">Date</span></dt>
+        <dd>
+            <span>{{vm.operation.date | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="helloJhipsterApp.operation.description">Description</span></dt>
+        <dd>
+            <span>{{vm.operation.description}}</span>
+        </dd>
+        <dt><span translate="helloJhipsterApp.operation.amount">Amount</span></dt>
+        <dd>
+            <span>{{vm.operation.amount}}</span>
+        </dd>
+        <dt><span translate="helloJhipsterApp.operation.bankAccount">Bank Account</span></dt>
+        <dd>
+            <a ui-sref="bank-account-detail({id:vm.operation.bankAccount.id})">{{vm.operation.bankAccount.name}}</a>
+        </dd>
+        <dt><span translate="helloJhipsterApp.operation.label">Label</span></dt>
+        <dd>
+            <span ng-repeat="label in vm.operation.labels">
+                <a ui-sref="label-detail({id: {{label.id}}})">{{label.label}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

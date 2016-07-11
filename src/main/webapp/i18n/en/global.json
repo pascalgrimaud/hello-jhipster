@@ -7,9 +7,9 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
-                "bankAccount": "BankAccount",
-                "operation": "Operation",
+                "bankAccount": "Bank Account",
                 "label": "Label",
+                "operation": "Operation",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -23,7 +23,7 @@
             },
             "admin": {
                 "main": "Administration",
-                "user-management": "User management",
+                "userManagement": "User management",
                 "tracker": "User tracker",
                 "metrics": "Metrics",
                 "health": "Health",
@@ -48,8 +48,8 @@
         },
         "messages": {
             "info": {
-                "authenticated": "If you want to <a class=\"alert-link\" href=\"#/login\">sign in</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
-                "register": "You don't have an account yet? <a class=\"alert-link\" href=\"#/register\">Register a new account</a>"
+                "authenticated": "If you want to <a class=\"alert-link\" href=\"\" ng-click=\"vm.login()\">sign in</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
+                "register": "You don't have an account yet? <a class=\"alert-link\" href=\"\" ng-click=\"vm.register()\">Register a new account</a>"
             },
             "error": {
                 "dontmatch": "The password and its confirmation do not match!"
@@ -57,13 +57,13 @@
             "validate": {
                 "newpassword": {
                     "required": "Your password is required.",
-                    "minlength": "Your password is required to be at least 5 characters.",
+                    "minlength": "Your password is required to be at least 4 characters.",
                     "maxlength": "Your password cannot be longer than 50 characters.",
                     "strength": "Password strength:"
                 },
                 "confirmpassword": {
                     "required": "Your confirmation password is required.",
-                    "minlength": "Your confirmation password is required to be at least 5 characters.",
+                    "minlength": "Your confirmation password is required to be at least 4 characters.",
                     "maxlength": "Your confirmation password cannot be longer than 50 characters."
                 },
                 "email": {
@@ -76,6 +76,9 @@
         },
         "field": {
             "id": "ID"
+        },
+        "ribbon": {
+            "dev":"Development"
         }
     },
     "entity": {
@@ -86,6 +89,7 @@
             "cancel": "Cancel",
             "delete": "Delete",
             "edit": "Edit",
+            "open": "Open",
             "save": "Save",
             "view": "View"
         },
@@ -111,14 +115,12 @@
     },
     "error": {
         "server.not.reachable": "Server not reachable",
+        "url.not.found": "Not found",
         "NotNull": "Field {{ fieldName }} cannot be empty!",
         "Size": "Field {{ fieldName }} does not meet min/max size requirements!",
         "userexists": "Login name already used!",
         "emailexists": "E-mail is already in use!",
         "idexists": "A new {{ entityName }} cannot already have an ID"
     },
-    "footer": "This is your footer",
-    "bootswatch": {
-        "themeSelector": "Theme"
-    }
+    "footer": "This is your footer"
 }

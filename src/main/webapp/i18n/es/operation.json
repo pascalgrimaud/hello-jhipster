@@ -1,10 +1,11 @@
 {
-    "hellojhipsterApp": {
+    "helloJhipsterApp": {
         "operation" : {
             "home": {
                 "title": "Operations",
                 "createLabel": "Crear nuevo Operation",
-                "createOrEditLabel": "Crear o editar Operation"
+                "createOrEditLabel": "Crear o editar Operation",
+                "search": "Search for Operation"
             },
             "created": "Un nuevo Operation ha sido creado con el identificador {{ param }}",
             "updated": "Un Operation ha sido actualizado con el identificador {{ param }}",
@@ -18,7 +19,7 @@
             "date": "Date",
             "description": "Description",
             "amount": "Amount",
-            "bankAccount": "BankAccount",
+            "bankAccount": "Bank Account",
             "label": "Label"
         }
     }
