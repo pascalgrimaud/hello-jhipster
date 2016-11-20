@@ -1,10 +1,8 @@
 package com.mycompany.myapp.config;
 
 import javax.validation.constraints.NotNull;
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.cors.CorsConfiguration;
-
 
 /**
  * Properties specific to JHipster.
@@ -126,18 +124,7 @@ public class JHipsterProperties {
     }
 
     public static class Cache {
-
-        private int timeToLiveSeconds = 3600;
-
         private final Ehcache ehcache = new Ehcache();
-
-        public int getTimeToLiveSeconds() {
-            return timeToLiveSeconds;
-        }
-
-        public void setTimeToLiveSeconds(int timeToLiveSeconds) {
-            this.timeToLiveSeconds = timeToLiveSeconds;
-        }
 
         public Ehcache getEhcache() {
             return ehcache;
@@ -161,12 +148,22 @@ public class JHipsterProperties {
 
         private String from = "HelloJhipster@localhost";
 
+        private String baseUrl = "";
+
         public String getFrom() {
             return from;
         }
 
         public void setFrom(String from) {
             this.from = from;
+        }
+
+        public String getBaseUrl() {
+            return baseUrl;
+        }
+
+        public void setBaseUrl(String baseUrl) {
+            this.baseUrl = baseUrl;
         }
     }
 
@@ -290,18 +287,12 @@ public class JHipsterProperties {
 
         private final Jmx jmx = new Jmx();
 
-        private final Spark spark = new Spark();
-
         private final Graphite graphite = new Graphite();
 
         private final Logs logs = new Logs();
 
         public Jmx getJmx() {
             return jmx;
-        }
-
-        public Spark getSpark() {
-            return spark;
         }
 
         public Graphite getGraphite() {
@@ -311,7 +302,6 @@ public class JHipsterProperties {
         public Logs getLogs() {
             return logs;
         }
-
 
         public static class Jmx {
 
@@ -323,39 +313,6 @@ public class JHipsterProperties {
 
             public void setEnabled(boolean enabled) {
                 this.enabled = enabled;
-            }
-        }
-
-        public static class Spark {
-
-            private boolean enabled = false;
-
-            private String host = "localhost";
-
-            private int port = 9999;
-
-            public boolean isEnabled() {
-                return enabled;
-            }
-
-            public void setEnabled(boolean enabled) {
-                this.enabled = enabled;
-            }
-
-            public String getHost() {
-                return host;
-            }
-
-            public void setHost(String host) {
-                this.host = host;
-            }
-
-            public int getPort() {
-                return port;
-            }
-
-            public void setPort(int port) {
-                this.port = port;
             }
         }
 
@@ -462,9 +419,7 @@ public class JHipsterProperties {
 
             public void setQueueSize(int queueSize) { this.queueSize = queueSize; }
         }
-
     }
-
 
     public static class Ribbon {
 

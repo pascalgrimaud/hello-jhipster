@@ -5,8 +5,8 @@
     "packageFolder": "com/mycompany/myapp",
     "authenticationType": "session",
     "hibernateCache": "ehcache",
-    "clusteredHttpSession": "no",
-    "websocket": "no",
+    "clusteredHttpSession": false,
+    "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
     "prodDatabaseType": "mysql",
@@ -20,7 +20,7 @@
     "testFrameworks": [
       "gatling"
     ],
-    "jhipsterVersion": "3.4.2",
+    "jhipsterVersion": "3.11.0",
     "serverPort": "8080",
     "applicationType": "monolith",
     "jhiPrefix": "jhi",
@@ -32,6 +32,9 @@
       "ja",
       "ru",
       "es"
-    ]
+    ],
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "yarn": true
   }
 }

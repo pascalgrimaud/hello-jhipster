@@ -1,14 +1,14 @@
 {
     "health": {
-        "title": "Heath checks",
-        "refresh.button": "Refresh",
+        "title": "Verifiche",
+        "refresh.button": "Aggiorna",
         "stacktrace": "Stacktrace",
         "details": {
-            "details": "Details",
-            "properties": "Properties",
-            "name": "Name",
-            "value": "Value",
-            "error": "Error"
+            "details": "Dettagli",
+            "properties": "Proprietà",
+            "name": "Nome",
+            "value": "Valore",
+            "error": "Errore"
         },
         "indicator": {
             "diskSpace": "Spazio su disco",

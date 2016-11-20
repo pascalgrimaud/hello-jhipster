@@ -3,15 +3,15 @@
         "bankAccount" : {
             "home": {
                 "title": "BankAccounts",
-                "createLabel": "Create a new Bank Account",
-                "createOrEditLabel": "Create or edit a Bank Account",
-                "search": "Search for Bank Account"
+                "createLabel": "Genera un nuovo Bank Account",
+                "createOrEditLabel": "Genera o modifica un Bank Account",
+                "search": "Cerca Bank Account"
             },
-            "created": "A new Bank Account is created with identifier {{ param }}",
-            "updated": "A Bank Account is updated with identifier {{ param }}",
-            "deleted": "A Bank Account is deleted with identifier {{ param }}",
+            "created": "&Egrave; stato generato un nuovo Bank Account con identificatore { param }}",
+            "updated": "&Egrave; stato aggiornato Bank Account identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Bank Account con identificatore {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Bank Account {{ id }}?"
+                "question": "Sei sicuro di volere eliminare Bank Account {{ id }}?"
             },
             "detail": {
                 "title": "Bank Account"

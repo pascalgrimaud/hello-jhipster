@@ -52,8 +52,41 @@
                 }],
                 entity: ['$stateParams', 'Label', function($stateParams, Label) {
                     return Label.get({id : $stateParams.id}).$promise;
+                }],
+                previousState: ["$state", function ($state) {
+                    var currentStateData = {
+                        name: $state.current.name || 'label',
+                        params: $state.params,
+                        url: $state.href($state.current.name, $state.params)
+                    };
+                    return currentStateData;
                 }]
             }
+        })
+        .state('label-detail.edit', {
+            parent: 'label-detail',
+            url: '/detail/edit',
+            data: {
+                authorities: ['ROLE_USER']
+            },
+            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
+                $uibModal.open({
+                    templateUrl: 'app/entities/label/label-dialog.html',
+                    controller: 'LabelDialogController',
+                    controllerAs: 'vm',
+                    backdrop: 'static',
+                    size: 'lg',
+                    resolve: {
+                        entity: ['Label', function(Label) {
+                            return Label.get({id : $stateParams.id}).$promise;
+                        }]
+                    }
+                }).result.then(function() {
+                    $state.go('^', {}, { reload: false });
+                }, function() {
+                    $state.go('^');
+                });
+            }]
         })
         .state('label.new', {
             parent: 'label',
@@ -77,7 +110,7 @@
                         }
                     }
                 }).result.then(function() {
-                    $state.go('label', null, { reload: true });
+                    $state.go('label', null, { reload: 'label' });
                 }, function() {
                     $state.go('label');
                 });
@@ -102,7 +135,7 @@
                         }]
                     }
                 }).result.then(function() {
-                    $state.go('label', null, { reload: true });
+                    $state.go('label', null, { reload: 'label' });
                 }, function() {
                     $state.go('^');
                 });
@@ -126,7 +159,7 @@
                         }]
                     }
                 }).result.then(function() {
-                    $state.go('label', null, { reload: true });
+                    $state.go('label', null, { reload: 'label' });
                 }, function() {
                     $state.go('^');
                 });

@@ -1,26 +1,31 @@
 
 <div>
-    <h2><span translate="helloJhipsterApp.bankAccount.detail.title">Bank Account</span> {{vm.bankAccount.id}}</h2>
+    <h2><span data-translate="helloJhipsterApp.bankAccount.detail.title">Bank Account</span> {{vm.bankAccount.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="dl-horizontal jh-entity-details">
-        <dt><span translate="helloJhipsterApp.bankAccount.name">Name</span></dt>
+        <dt><span data-translate="helloJhipsterApp.bankAccount.name">Name</span></dt>
         <dd>
             <span>{{vm.bankAccount.name}}</span>
         </dd>
-        <dt><span translate="helloJhipsterApp.bankAccount.balance">Balance</span></dt>
+        <dt><span data-translate="helloJhipsterApp.bankAccount.balance">Balance</span></dt>
         <dd>
             <span>{{vm.bankAccount.balance}}</span>
         </dd>
-        <dt><span translate="helloJhipsterApp.bankAccount.user">User</span></dt>
+        <dt><span data-translate="helloJhipsterApp.bankAccount.user">User</span></dt>
         <dd>
             {{vm.bankAccount.user.login}}
         </dd>
     </dl>
 
     <button type="submit"
-            onclick="window.history.back()"
+            ui-sref="{{ vm.previousState }}"
             class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bank-account-detail.edit({id:vm.bankAccount.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
     </button>
 </div>

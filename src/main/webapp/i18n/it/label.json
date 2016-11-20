@@ -3,15 +3,15 @@
         "label" : {
             "home": {
                 "title": "Labels",
-                "createLabel": "Create a new Label",
-                "createOrEditLabel": "Create or edit a Label",
-                "search": "Search for Label"
+                "createLabel": "Genera un nuovo Label",
+                "createOrEditLabel": "Genera o modifica un Label",
+                "search": "Cerca Label"
             },
-            "created": "A new Label is created with identifier {{ param }}",
-            "updated": "A Label is updated with identifier {{ param }}",
-            "deleted": "A Label is deleted with identifier {{ param }}",
+            "created": "&Egrave; stato generato un nuovo Label con identificatore { param }}",
+            "updated": "&Egrave; stato aggiornato Label identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Label con identificatore {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Label {{ id }}?"
+                "question": "Sei sicuro di volere eliminare Label {{ id }}?"
             },
             "detail": {
                 "title": "Label"

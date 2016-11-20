@@ -2,6 +2,7 @@ package com.mycompany.myapp.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import com.mycompany.myapp.domain.Operation;
+
 import com.mycompany.myapp.repository.OperationRepository;
 import com.mycompany.myapp.repository.search.OperationSearchRepository;
 import com.mycompany.myapp.web.rest.util.HeaderUtil;
@@ -12,7 +13,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,10 +38,10 @@ public class OperationResource {
         
     @Inject
     private OperationRepository operationRepository;
-    
+
     @Inject
     private OperationSearchRepository operationSearchRepository;
-    
+
     /**
      * POST  /operations : Create a new operation.
      *
@@ -49,9 +49,7 @@ public class OperationResource {
      * @return the ResponseEntity with status 201 (Created) and with body the new operation, or with status 400 (Bad Request) if the operation has already an ID
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
-    @RequestMapping(value = "/operations",
-        method = RequestMethod.POST,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping("/operations")
     @Timed
     public ResponseEntity<Operation> createOperation(@Valid @RequestBody Operation operation) throws URISyntaxException {
         log.debug("REST request to save Operation : {}", operation);
@@ -74,9 +72,7 @@ public class OperationResource {
      * or with status 500 (Internal Server Error) if the operation couldnt be updated
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
-    @RequestMapping(value = "/operations",
-        method = RequestMethod.PUT,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping("/operations")
     @Timed
     public ResponseEntity<Operation> updateOperation(@Valid @RequestBody Operation operation) throws URISyntaxException {
         log.debug("REST request to update Operation : {}", operation);
@@ -97,14 +93,12 @@ public class OperationResource {
      * @return the ResponseEntity with status 200 (OK) and the list of operations in body
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
      */
-    @RequestMapping(value = "/operations",
-        method = RequestMethod.GET,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("/operations")
     @Timed
     public ResponseEntity<List<Operation>> getAllOperations(Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to get a page of Operations");
-        Page<Operation> page = operationRepository.findAll(pageable); 
+        Page<Operation> page = operationRepository.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/operations");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
@@ -115,9 +109,7 @@ public class OperationResource {
      * @param id the id of the operation to retrieve
      * @return the ResponseEntity with status 200 (OK) and with body the operation, or with status 404 (Not Found)
      */
-    @RequestMapping(value = "/operations/{id}",
-        method = RequestMethod.GET,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("/operations/{id}")
     @Timed
     public ResponseEntity<Operation> getOperation(@PathVariable Long id) {
         log.debug("REST request to get Operation : {}", id);
@@ -135,9 +127,7 @@ public class OperationResource {
      * @param id the id of the operation to delete
      * @return the ResponseEntity with status 200 (OK)
      */
-    @RequestMapping(value = "/operations/{id}",
-        method = RequestMethod.DELETE,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping("/operations/{id}")
     @Timed
     public ResponseEntity<Void> deleteOperation(@PathVariable Long id) {
         log.debug("REST request to delete Operation : {}", id);
@@ -150,12 +140,12 @@ public class OperationResource {
      * SEARCH  /_search/operations?query=:query : search for the operation corresponding
      * to the query.
      *
-     * @param query the query of the operation search
+     * @param query the query of the operation search 
+     * @param pageable the pagination information
      * @return the result of the search
+     * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
      */
-    @RequestMapping(value = "/_search/operations",
-        method = RequestMethod.GET,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("/_search/operations")
     @Timed
     public ResponseEntity<List<Operation>> searchOperations(@RequestParam String query, Pageable pageable)
         throws URISyntaxException {

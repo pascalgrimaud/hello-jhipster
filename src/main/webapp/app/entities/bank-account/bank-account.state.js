@@ -52,8 +52,41 @@
                 }],
                 entity: ['$stateParams', 'BankAccount', function($stateParams, BankAccount) {
                     return BankAccount.get({id : $stateParams.id}).$promise;
+                }],
+                previousState: ["$state", function ($state) {
+                    var currentStateData = {
+                        name: $state.current.name || 'bank-account',
+                        params: $state.params,
+                        url: $state.href($state.current.name, $state.params)
+                    };
+                    return currentStateData;
                 }]
             }
+        })
+        .state('bank-account-detail.edit', {
+            parent: 'bank-account-detail',
+            url: '/detail/edit',
+            data: {
+                authorities: ['ROLE_USER']
+            },
+            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
+                $uibModal.open({
+                    templateUrl: 'app/entities/bank-account/bank-account-dialog.html',
+                    controller: 'BankAccountDialogController',
+                    controllerAs: 'vm',
+                    backdrop: 'static',
+                    size: 'lg',
+                    resolve: {
+                        entity: ['BankAccount', function(BankAccount) {
+                            return BankAccount.get({id : $stateParams.id}).$promise;
+                        }]
+                    }
+                }).result.then(function() {
+                    $state.go('^', {}, { reload: false });
+                }, function() {
+                    $state.go('^');
+                });
+            }]
         })
         .state('bank-account.new', {
             parent: 'bank-account',
@@ -78,7 +111,7 @@
                         }
                     }
                 }).result.then(function() {
-                    $state.go('bank-account', null, { reload: true });
+                    $state.go('bank-account', null, { reload: 'bank-account' });
                 }, function() {
                     $state.go('bank-account');
                 });
@@ -103,7 +136,7 @@
                         }]
                     }
                 }).result.then(function() {
-                    $state.go('bank-account', null, { reload: true });
+                    $state.go('bank-account', null, { reload: 'bank-account' });
                 }, function() {
                     $state.go('^');
                 });
@@ -127,7 +160,7 @@
                         }]
                     }
                 }).result.then(function() {
-                    $state.go('bank-account', null, { reload: true });
+                    $state.go('bank-account', null, { reload: 'bank-account' });
                 }, function() {
                     $state.go('^');
                 });

@@ -2,6 +2,7 @@ package com.mycompany.myapp.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import com.mycompany.myapp.domain.BankAccount;
+
 import com.mycompany.myapp.repository.BankAccountRepository;
 import com.mycompany.myapp.repository.search.BankAccountSearchRepository;
 import com.mycompany.myapp.web.rest.util.HeaderUtil;
@@ -9,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,10 +35,10 @@ public class BankAccountResource {
         
     @Inject
     private BankAccountRepository bankAccountRepository;
-    
+
     @Inject
     private BankAccountSearchRepository bankAccountSearchRepository;
-    
+
     /**
      * POST  /bank-accounts : Create a new bankAccount.
      *
@@ -46,9 +46,7 @@ public class BankAccountResource {
      * @return the ResponseEntity with status 201 (Created) and with body the new bankAccount, or with status 400 (Bad Request) if the bankAccount has already an ID
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
-    @RequestMapping(value = "/bank-accounts",
-        method = RequestMethod.POST,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping("/bank-accounts")
     @Timed
     public ResponseEntity<BankAccount> createBankAccount(@Valid @RequestBody BankAccount bankAccount) throws URISyntaxException {
         log.debug("REST request to save BankAccount : {}", bankAccount);
@@ -71,9 +69,7 @@ public class BankAccountResource {
      * or with status 500 (Internal Server Error) if the bankAccount couldnt be updated
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
-    @RequestMapping(value = "/bank-accounts",
-        method = RequestMethod.PUT,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping("/bank-accounts")
     @Timed
     public ResponseEntity<BankAccount> updateBankAccount(@Valid @RequestBody BankAccount bankAccount) throws URISyntaxException {
         log.debug("REST request to update BankAccount : {}", bankAccount);
@@ -92,9 +88,7 @@ public class BankAccountResource {
      *
      * @return the ResponseEntity with status 200 (OK) and the list of bankAccounts in body
      */
-    @RequestMapping(value = "/bank-accounts",
-        method = RequestMethod.GET,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("/bank-accounts")
     @Timed
     public List<BankAccount> getAllBankAccounts() {
         log.debug("REST request to get all BankAccounts");
@@ -108,9 +102,7 @@ public class BankAccountResource {
      * @param id the id of the bankAccount to retrieve
      * @return the ResponseEntity with status 200 (OK) and with body the bankAccount, or with status 404 (Not Found)
      */
-    @RequestMapping(value = "/bank-accounts/{id}",
-        method = RequestMethod.GET,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("/bank-accounts/{id}")
     @Timed
     public ResponseEntity<BankAccount> getBankAccount(@PathVariable Long id) {
         log.debug("REST request to get BankAccount : {}", id);
@@ -128,9 +120,7 @@ public class BankAccountResource {
      * @param id the id of the bankAccount to delete
      * @return the ResponseEntity with status 200 (OK)
      */
-    @RequestMapping(value = "/bank-accounts/{id}",
-        method = RequestMethod.DELETE,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping("/bank-accounts/{id}")
     @Timed
     public ResponseEntity<Void> deleteBankAccount(@PathVariable Long id) {
         log.debug("REST request to delete BankAccount : {}", id);
@@ -143,12 +133,10 @@ public class BankAccountResource {
      * SEARCH  /_search/bank-accounts?query=:query : search for the bankAccount corresponding
      * to the query.
      *
-     * @param query the query of the bankAccount search
+     * @param query the query of the bankAccount search 
      * @return the result of the search
      */
-    @RequestMapping(value = "/_search/bank-accounts",
-        method = RequestMethod.GET,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("/_search/bank-accounts")
     @Timed
     public List<BankAccount> searchBankAccounts(@RequestParam String query) {
         log.debug("REST request to search BankAccounts for query {}", query);

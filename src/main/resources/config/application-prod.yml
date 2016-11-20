@@ -18,6 +18,7 @@ spring:
         livereload:
             enabled: false
     datasource:
+        type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:mysql://localhost:3306/HelloJhipster?useUnicode=true&characterEncoding=utf8&useSSL=false
         name:
         username: root
@@ -68,7 +69,6 @@ jhipster:
         cache: # Used by the CachingHttpHeadersFilter
             timeToLiveInDays: 1461
     cache: # Hibernate 2nd level cache, used by CacheConfiguration
-        timeToLiveSeconds: 3600
         ehcache:
             maxBytesLocalHeap: 256M
     security:
@@ -77,12 +77,9 @@ jhipster:
             key: dd3efeb4ac43ee3c8a80ace279d660b30de7c276
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: HelloJhipster@localhost
+        baseUrl: # keep empty to use the server's default URL
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
-        spark:
-            enabled: false
-            host: localhost
-            port: 9999
         graphite:
             enabled: false
             host: localhost

@@ -2,7 +2,7 @@ version: '2'
 services:
     hellojhipster-elasticsearch:
         container_name: hellojhipster-elasticsearch
-        image: elasticsearch:1.7.5
+        image: elasticsearch:2.4.1
         # volumes:
         #     - ~/volumes/jhipster/HelloJhipster/elasticsearch/:/usr/share/elasticsearch/data/
         ports:

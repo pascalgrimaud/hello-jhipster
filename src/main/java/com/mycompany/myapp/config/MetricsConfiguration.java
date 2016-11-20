@@ -10,9 +10,11 @@ import com.codahale.metrics.health.HealthCheckRegistry;
 import com.codahale.metrics.jvm.*;
 import com.ryantenney.metrics.spring.config.annotation.EnableMetrics;
 import com.ryantenney.metrics.spring.config.annotation.MetricsConfigurerAdapter;
-import fr.ippon.spark.metrics.SparkReporter;
+import com.zaxxer.hikari.HikariDataSource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.*;
 
@@ -41,6 +43,9 @@ public class MetricsConfiguration extends MetricsConfigurerAdapter {
     @Inject
     private JHipsterProperties jHipsterProperties;
 
+    @Autowired(required = false)
+    private HikariDataSource hikariDataSource;
+
     @Override
     @Bean
     public MetricRegistry getMetricRegistry() {
@@ -61,6 +66,10 @@ public class MetricsConfiguration extends MetricsConfigurerAdapter {
         metricRegistry.register(PROP_METRIC_REG_JVM_THREADS, new ThreadStatesGaugeSet());
         metricRegistry.register(PROP_METRIC_REG_JVM_FILES, new FileDescriptorRatioGauge());
         metricRegistry.register(PROP_METRIC_REG_JVM_BUFFERS, new BufferPoolMetricSet(ManagementFactory.getPlatformMBeanServer()));
+        if (hikariDataSource != null) {
+            log.debug("Monitoring the datasource");
+            hikariDataSource.setMetricRegistry(metricRegistry);
+        }
         if (jHipsterProperties.getMetrics().getJmx().isEnabled()) {
             log.debug("Initializing Metrics JMX reporting");
             JmxReporter jmxReporter = JmxReporter.forRegistry(metricRegistry).build();
@@ -104,33 +113,6 @@ public class MetricsConfiguration extends MetricsConfigurerAdapter {
                     .prefixedWith(graphitePrefix)
                     .build(graphite);
                 graphiteReporter.start(1, TimeUnit.MINUTES);
-            }
-        }
-    }
-
-    @Configuration
-    @ConditionalOnClass(SparkReporter.class)
-    public static class SparkRegistry {
-
-        private final Logger log = LoggerFactory.getLogger(SparkRegistry.class);
-
-        @Inject
-        private MetricRegistry metricRegistry;
-
-        @Inject
-        private JHipsterProperties jHipsterProperties;
-
-        @PostConstruct
-        private void init() {
-            if (jHipsterProperties.getMetrics().getSpark().isEnabled()) {
-                log.info("Initializing Metrics Spark reporting");
-                String sparkHost = jHipsterProperties.getMetrics().getSpark().getHost();
-                Integer sparkPort = jHipsterProperties.getMetrics().getSpark().getPort();
-                SparkReporter sparkReporter = SparkReporter.forRegistry(metricRegistry)
-                    .convertRatesTo(TimeUnit.SECONDS)
-                    .convertDurationsTo(TimeUnit.MILLISECONDS)
-                    .build(sparkHost, sparkPort);
-                sparkReporter.start(1, TimeUnit.MINUTES);
             }
         }
     }

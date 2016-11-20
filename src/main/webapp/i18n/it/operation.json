@@ -3,15 +3,15 @@
         "operation" : {
             "home": {
                 "title": "Operations",
-                "createLabel": "Create a new Operation",
-                "createOrEditLabel": "Create or edit a Operation",
-                "search": "Search for Operation"
+                "createLabel": "Genera un nuovo Operation",
+                "createOrEditLabel": "Genera o modifica un Operation",
+                "search": "Cerca Operation"
             },
-            "created": "A new Operation is created with identifier {{ param }}",
-            "updated": "A Operation is updated with identifier {{ param }}",
-            "deleted": "A Operation is deleted with identifier {{ param }}",
+            "created": "&Egrave; stato generato un nuovo Operation con identificatore { param }}",
+            "updated": "&Egrave; stato aggiornato Operation identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Operation con identificatore {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Operation {{ id }}?"
+                "question": "Sei sicuro di volere eliminare Operation {{ id }}?"
             },
             "detail": {
                 "title": "Operation"
