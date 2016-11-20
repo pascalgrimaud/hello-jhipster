@@ -1,29 +1,31 @@
 {
   "generator-jhipster": {
+    "jhipsterVersion": "3.11.0",
     "baseName": "HelloJhipster",
-    "packageName": "com.mycompany.myapp",
-    "packageFolder": "com/mycompany/myapp",
+    "packageName": "io.github.pascalgrimaud",
+    "packageFolder": "io/github/pascalgrimaud",
+    "serverPort": "8080",
     "authenticationType": "session",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": false,
     "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
-    "prodDatabaseType": "mysql",
+    "prodDatabaseType": "postgresql",
     "searchEngine": "elasticsearch",
-    "useSass": false,
+    "messageBroker": false,
     "buildTool": "maven",
-    "frontendBuilder": "grunt",
-    "enableTranslation": true,
     "enableSocialSignIn": false,
-    "rememberMeKey": "dd3efeb4ac43ee3c8a80ace279d660b30de7c276",
-    "testFrameworks": [
-      "gatling"
-    ],
-    "jhipsterVersion": "3.11.0",
-    "serverPort": "8080",
+    "rememberMeKey": "88e32c9d111e204fcb3d02370d39409e33b1b5cd",
+    "useSass": false,
     "applicationType": "monolith",
+    "testFrameworks": [
+      "gatling",
+      "protractor"
+    ],
     "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
     "languages": [
       "en",
       "fr",
@@ -33,7 +35,6 @@
       "ru",
       "es"
     ],
-    "messageBroker": false,
     "serviceDiscoveryType": false,
     "yarn": true
   }

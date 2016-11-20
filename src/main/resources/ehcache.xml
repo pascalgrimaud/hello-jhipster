@@ -17,47 +17,47 @@
             overflowToDisk="false"
             />
 
-    <cache name="com.mycompany.myapp.domain.User"
+    <cache name="io.github.pascalgrimaud.domain.User"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.Authority"
+    <cache name="io.github.pascalgrimaud.domain.Authority"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.User.authorities"
+    <cache name="io.github.pascalgrimaud.domain.User.authorities"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.PersistentToken"
+    <cache name="io.github.pascalgrimaud.domain.PersistentToken"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.User.persistentTokens"
+    <cache name="io.github.pascalgrimaud.domain.User.persistentTokens"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.BankAccount"
+    <cache name="io.github.pascalgrimaud.domain.BankAccount"
         timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.BankAccount.operations"
+    <cache name="io.github.pascalgrimaud.domain.BankAccount.operations"
         timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.Label"
+    <cache name="io.github.pascalgrimaud.domain.Label"
         timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.Label.operations"
+    <cache name="io.github.pascalgrimaud.domain.Label.operations"
         timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.Operation"
+    <cache name="io.github.pascalgrimaud.domain.Operation"
         timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.Operation.labels"
+    <cache name="io.github.pascalgrimaud.domain.Operation.labels"
         timeToLiveSeconds="3600">
     </cache>
 

@@ -56,7 +56,8 @@ Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in
 
     gulp test
 
-
+UI end-to-end tests are powered by [Protractor][], which is built on top of WebDriverJS. They're located in `src/test/javascript/e2e`
+and can be run by starting Spring Boot in one terminal (`./mvnw spring-boot:run`) and running the tests (`gulp itest`) in a second one.
 ### Other tests
 
 Performance tests are run by [Gatling][] and written in Scala. They're located in `src/test/gatling` and can be run with:
@@ -68,13 +69,13 @@ For more information, refer to the [Running tests page][].
 ## Using Docker to simplify development (optional)
 
 You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the `src/main/docker` folder to launch required third party services.
-For example, to start a mysql database in a docker container, run:
+For example, to start a postgresql database in a docker container, run:
 
-    docker-compose -f src/main/docker/mysql.yml up -d
+    docker-compose -f src/main/docker/postgresql.yml up -d
 
 To stop it and remove the container, run:
 
-    docker-compose -f src/main/docker/mysql.yml down
+    docker-compose -f src/main/docker/postgresql.yml down
 
 You can also fully dockerize your application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:

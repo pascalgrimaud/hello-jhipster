@@ -23,7 +23,7 @@ spring:
         username:
         password:
     jpa:
-        database-platform: com.mycompany.myapp.domain.util.FixedH2Dialect
+        database-platform: io.github.pascalgrimaud.domain.util.FixedH2Dialect
         database: H2
         open-in-view: false
         show-sql: true
@@ -75,7 +75,7 @@ jhipster:
     security:
         rememberMe:
             # security key (this key should be unique for your application, and kept secret)
-            key: dd3efeb4ac43ee3c8a80ace279d660b30de7c276
+            key: 88e32c9d111e204fcb3d02370d39409e33b1b5cd
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
     swagger:

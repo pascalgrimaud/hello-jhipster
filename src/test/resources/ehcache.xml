@@ -12,27 +12,27 @@
             overflowToDisk="false"
             />
 
-    <cache name="com.mycompany.myapp.domain.User"
+    <cache name="io.github.pascalgrimaud.domain.User"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.Authority"
+    <cache name="io.github.pascalgrimaud.domain.Authority"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.User.authorities"
+    <cache name="io.github.pascalgrimaud.domain.User.authorities"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.PersistentToken"
+    <cache name="io.github.pascalgrimaud.domain.PersistentToken"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.User.persistentTokens"
+    <cache name="io.github.pascalgrimaud.domain.User.persistentTokens"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.mycompany.myapp.domain.PersistentAuditEvent"
+    <cache name="io.github.pascalgrimaud.domain.PersistentAuditEvent"
            timeToLiveSeconds="3600">
     </cache>
 </ehcache>
