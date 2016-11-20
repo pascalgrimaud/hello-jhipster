@@ -1,7 +1,6 @@
 package com.mycompany.myapp.web.rest;
 
 import com.mycompany.myapp.HelloJhipsterApp;
-import com.mycompany.myapp.config.JHipsterProperties;
 import com.mycompany.myapp.domain.Authority;
 import com.mycompany.myapp.domain.User;
 import com.mycompany.myapp.repository.AuthorityRepository;
@@ -29,7 +28,6 @@ import java.util.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Matchers.anyObject;
-import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -44,9 +42,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = HelloJhipsterApp.class)
 public class AccountResourceIntTest {
-
-    @Inject
-    private JHipsterProperties jHipsterProperties;
 
     @Inject
     private UserRepository userRepository;
@@ -70,10 +65,9 @@ public class AccountResourceIntTest {
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        doNothing().when(mockMailService).sendActivationEmail((User) anyObject(), anyString());
+        doNothing().when(mockMailService).sendActivationEmail((User) anyObject());
 
         AccountResource accountResource = new AccountResource();
-        ReflectionTestUtils.setField(accountResource, "jHipsterProperties", jHipsterProperties);
         ReflectionTestUtils.setField(accountResource, "userRepository", userRepository);
         ReflectionTestUtils.setField(accountResource, "userService", userService);
         ReflectionTestUtils.setField(accountResource, "mailService", mockMailService);

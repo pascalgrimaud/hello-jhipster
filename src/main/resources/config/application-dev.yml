@@ -78,7 +78,7 @@ jhipster:
             key: dd3efeb4ac43ee3c8a80ace279d660b30de7c276
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: HelloJhipster@localhost
-        baseUrl: # keep empty to use the server's default URL
+        baseUrl: http://127.0.0.1:8080
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
         graphite:
